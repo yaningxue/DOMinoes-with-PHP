@@ -10,6 +10,7 @@
 <body>
   <h1>Yaning Xue's Dominoes</h1>
     <?php
+   // creat an array and put each part in this array
     $dominoes = [
       '<div class="dots"></div>',
       '<div class="dots one">
@@ -48,8 +49,11 @@
     ];
     ?>
     <div class="dominoes">
-    <?php for ($i=1; $i<=100; $i++) : ?>
+    <?php 
+    // use a for loop to output 100 cards randomly.
+      for ($i=1; $i<=100; $i++) : ?>
           <?php
+       // creat two random number of '0-6' to output the array randomly.
             $num1 = rand(0,6);
             $num2 = rand(0,6);
             echo '<div class="domino">' .$dominoes[$num1] .$dominoes[$num2] .'</div>';
